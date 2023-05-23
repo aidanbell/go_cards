@@ -1,0 +1,39 @@
+Functions:
+- Functions must state what type of data (if any) is returned
+function thing() string {
+- can return multiple values (string, int)
+
+Variables:
+- declared with type: var thing string = "thing"
+- declared with := operator (inferred type)
+- reassignment is standard
+
+Slice:
+- Like an array, but flexible
+- all records/elements need to be same data type
+- "a slice of type string"\
+    slice := []string{"el1", "el2"}
+- append will return a new slice, that we assign to the value
+    slice = append(slice, "el3")
+- zero indexed
+- slicing slices
+    slice[0:2] === slice[startIncluding:upToNotIncluding]
+
+for Loop:
+    for idx, card := range cards {}
+- range loops over whole slice
+- := is used because each loop redeclares the index and iterator
+
+
+Receiver functions:
+    funct (d deck) print() {
+- like a method
+- takes in a var name and type
+- basically 'this'/'self'
+- convention NEVER USES ^
+- convention uses single letter variables
+
+- _ is used when there's a variable we need (like idx in loops)
+  but want Go to ignore
+
+
